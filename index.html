@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Ribeiro | Criativus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f4f4f9 0%, #e0c3fc 100%);
+      min-height: 100vh;
+      color: #333;
+      line-height: 1.6;
+      animation: bgmove 8s linear infinite alternate;
+    }
+
+    @keyframes bgmove {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    header {
+      background: linear-gradient(90deg, #4a148c 60%, #6a1b9a 100%);
+      color: white;
+      padding: 32px 0 18px 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(76, 0, 130, 0.18);
+    }
+
+    header img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffd700;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 16px rgba(76, 0, 130, 0.15);
+      animation: fadeIn 1.2s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.8);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+
+    header h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      font-size: 19px;
+      margin-top: 5px;
+    }
+
+    nav {
+      background: #6a1b9a;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(76, 0, 130, 0.10);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+      position: relative;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a i {
+      margin-right: 6px;
+      color: #ffd700;
+      font-size: 18px;
+      vertical-align: middle;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      transform: scale(1.11);
+    }
+    nav a:hover i {
+      color: #fffbe7;
+    }
+
+    section {
+      padding: 37px 12px 24px 12px;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .intro {
+      max-width: 530px;
+      margin: 0 auto 30px auto;
+      padding: 17px 18px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(76, 0, 130, 0.07);
+      font-size: 17px;
+      color: #4a148c;
+      line-height: 1.8;
+      border-left: 5px solid #ffd700;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #6a1b9a;
+      font-size: 26px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 16px rgba(76,0,130,0.15);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      position: relative;
+      animation: fadeIn 1.2s;
+    }
+
+    .project-card:hover {
+      box-shadow: 0px 8px 24px rgba(76,0,130,0.25);
+      transform: scale(1.025);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.35s;
+      border-bottom: 2px solid #ffd7003a;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .project-title {
+      font-size: 18px;
+      color: #4a148c;
+      font-weight: bold;
+      margin: 12px 0 0 0;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      color: #333;
+      margin: 7px 0 16px 0;
+    }
+
+    .ver-mais {
+      display: inline-block;
+      background: #ffd700;
+      color: #4a148c;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 18px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: 0 2px 8px rgba(76,0,130,0.10);
+    }
+    .ver-mais:hover {
+      background: #4a148c;
+      color: #ffd700;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #4a148c 70%, #6a1b9a 100%);
+      color: white;
+      text-align: center;
+      padding: 20px 0 10px 0;
+      margin-top: 38px;
+      font-size: 15px;
+      position: relative;
+    }
+
+    .footer-social {
+      margin-top: 8px;
+    }
+    .footer-social a {
+      color: #ffd700;
+      margin: 0 10px;
+      font-size: 21px;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover {
+      color: #fffbe7;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 26px; }
+      .intro { font-size: 15px; }
+      .projects { grid-template-columns: 1fr; }
+      .project-card img { height: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/1047938386?v=4" alt="Victor Ribeiro de Oliveira">
+    <h1>🌟 Criativus | Portfólio Pessoal</h1>
+    <p>Bem-vindo ao portfólio de Victor Ribeiro de Oliveira</p>
+  </header>
+
+  <nav>
+    <a href="https://www.behance.net/" target="_blank"><i class="fab fa-behance"></i>Behance</a>
+    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i>Dribbble</a>
+    <a href="https://unsplash.com/" target="_blank"><i class="fab fa-unsplash"></i>Unsplash</a>
+    <a href="https://github.com/onlyvx7" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+  </nav>
+
+  <section>
+    <div class="intro">
+      Olá! Sou Victor Ribeiro de Oliveira, apaixonado por criatividade e design digital. Este portfólio é uma vitrine dos meus projetos, ideias e artes que buscam inspirar e conectar pessoas. Explore e conheça meu trabalho!
+    </div>
+    <h2>Meus Projetos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22f8313fda7c" alt="Design Criativo">
+        <div class="project-title">Design Criativo</div>
+        <div class="project-desc">Exploração de cores, formas e identidade visual para marcas e startups.</div>
+        <a class="ver-mais" href="#" title="Ver mais sobre Design Criativo">Ver mais</a>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1" alt="Arte Digital">
+        <div class="project-title">Arte Digital</div>
+        <div class="project-desc">Ilustrações digitais e manipulação de imagens para projetos artísticos.</div>
+        <a class="ver-mais" href="#" title="Ver mais sobre Arte Digital">Ver mais</a>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Projeto Web">
+        <div class="project-title">Projeto Web</div>
+        <div class="project-desc">Criação de sites responsivos, portfólios e landing pages interativas.</div>
+        <a class="ver-mais" href="#" title="Ver mais sobre Projeto Web">Ver mais</a>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Equipe Criando">
+        <div class="project-title">Equipe Criando</div>
+        <div class="project-desc">Colaborações em equipe para soluções criativas e inovadoras.</div>
+        <a class="ver-mais" href="#" title="Ver mais sobre Equipe Criando">Ver mais</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Criativus | Portfólio de Victor Ribeiro de Oliveira
+    <div class="footer-social">
+      <a href="https://www.behance.net/" target="_blank"><i class="fab fa-behance"></i></a>
+      <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+      <a href="https://unsplash.com/" target="_blank"><i class="fab fa-unsplash"></i></a>
+      <a href="https://github.com/onlyvx7" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
